@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Image Gallery</title>
+    <style>
+        body{
+            background-color: rgb(37, 72, 78);
+        }
+        /* Styling for the main container */
+        .slider-container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            overflow: hidden;
+            margin: auto;
+        }
+
+        /* Styling for the image wrapper */
+        .slider {
+            display: flex;
+            width: 100%; /* Adjust based on the number of images */
+            animation: slide 15s infinite;
+        }
+
+        /* Styling for each image */
+        .slider img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        /* Keyframes for sliding animation */
+        @keyframes slide {
+            0% { transform: translateX(0); }
+            20% { transform: translateX(-100%); }
+            40% { transform: translateX(-200%); }
+            60% { transform: translateX(-100%); }
+            80% { transform: translateX(0); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="slider-container">
+        <div class="slider">
+            <img src="img3.jpg" alt="Image 1">
+            <img src="img1.jpg" alt="Image 2">
+            <img src="img2.jpg" alt="Image 3">
+        </div>
+    </div>
+
+</body>
+</html>
